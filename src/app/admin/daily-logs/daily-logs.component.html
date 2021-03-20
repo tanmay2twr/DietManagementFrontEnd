@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Batch name</th>
+          <th>Batch Group</th>
+          <th>Breakfast</th>
+          <th>Date</th>
+          <th>Dinner</th>
+          <th>ExtraActivity</th>
+          <th>Fruits</th>
+          <th>Lunch</th>
+          <th>Vegetables</th>
+          <th>Workout</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let log of logs">
+          <td>{{log.fullName}}</td>
+          <td>{{log.batchName}}</td>
+          <td>{{log.batchGroup}}</td>
+          <td>{{log.breakfast}}</td>
+          <td>{{log.date}}</td>
+          <td>{{log.dinner}}</td>
+          <td>{{log.extraActivity}}</td>
+          <td>{{log.fruits}}</td>
+          <td>{{log.lunch}}</td>
+          <td>{{log.vegetables}}</td>
+          <td>{{log.workout}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

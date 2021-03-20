@@ -1,0 +1,111 @@
+<table mat-table [dataSource]="dataSource.data" class="mat-elevation-z8">
+  <!-- Position Column -->
+  <ng-container matColumnDef="fullName">
+    <th *matHeaderCellDef> Name </th>
+    <td *matCellDef="let element"> {{element.fullName}} </td>
+  </ng-container>
+  <!-- Position Column -->
+  <ng-container matColumnDef="age">
+    <th *matHeaderCellDef> Age </th>
+    <td *matCellDef="let element"> {{element.age}} </td>
+  </ng-container>
+  <!-- Position Column -->
+  <ng-container matColumnDef="gender">
+    <th *matHeaderCellDef> Gender </th>
+    <td *matCellDef="let element"> {{element.gender}} </td>
+  </ng-container>
+  <!-- Position Column -->
+  <ng-container matColumnDef="mobileNumber">
+    <th *matHeaderCellDef> Mobile </th>
+    <td *matCellDef="let element"> {{element.mobileNumber}} </td>
+  </ng-container>
+  <!-- Position Column -->
+  <ng-container matColumnDef="email">
+    <th *matHeaderCellDef> Email </th>
+    <td *matCellDef="let element"> {{element.email}} </td>
+  </ng-container>
+  <!-- Position Column -->
+  <ng-container matColumnDef="address">
+    <th *matHeaderCellDef> Address </th>
+    <td *matCellDef="let element"> {{element.address}} </td>
+  </ng-container>
+  <!-- Position Column -->
+  <ng-container matColumnDef="city">
+    <th *matHeaderCellDef> City </th>
+    <td *matCellDef="let element"> {{element.city}} </td>
+  </ng-container>
+  <!-- Position Column -->
+  <ng-container matColumnDef="state">
+    <th *matHeaderCellDef> State </th>
+    <td *matCellDef="let element"> {{element.state}} </td>
+  </ng-container>
+  <!-- Name Column -->
+  <ng-container matColumnDef="pincode">
+    <th *matHeaderCellDef> Pincode </th>
+    <td *matCellDef="let element"> {{element.pincode}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="country">
+    <th *matHeaderCellDef> Country </th>
+    <td *matCellDef="let element"> {{element.country}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="height">
+    <th *matHeaderCellDef> Height </th>
+    <td *matCellDef="let element"> {{element.height}} </td>
+  </ng-container>
+  <!-- Position Column -->
+  <ng-container matColumnDef="weight">
+    <th *matHeaderCellDef> Weight </th>
+    <td *matCellDef="let element"> {{element.weight}} </td>
+  </ng-container>
+  <!-- Position Column -->
+  <ng-container matColumnDef="BMI">
+    <th *matHeaderCellDef> BMI </th>
+    <td *matCellDef="let element"> {{element.bmi}} </td>
+  </ng-container>
+  <!-- Position Column -->
+  <ng-container matColumnDef="reason">
+    <th *matHeaderCellDef> Reason Joining </th>
+    <td *matCellDef="let element"> {{element.reason}} </td>
+  </ng-container>
+  <!-- Position Column -->
+  <ng-container matColumnDef="existing_medical">
+    <th *matHeaderCellDef> Medical Restrictions </th>
+    <td *matCellDef="let element"> {{element.existing_medical}} </td>
+  </ng-container>
+  <!-- Position Column -->
+  <ng-container matColumnDef="existing_dietary">
+    <th *matHeaderCellDef> Dietery Restrictions </th>
+    <td *matCellDef="let element"> {{element.existing_dietary}} </td>
+  </ng-container>
+  <!-- Name Column -->
+  <ng-container matColumnDef="dietary_custom">
+    <th *matHeaderCellDef> Dietary Custom </th>
+    <td *matCellDef="let element"> {{element.dietary_custom}} </td>
+  </ng-container>
+  <!-- Name Column -->
+  <ng-container matColumnDef="pregnant_status">
+    <th *matHeaderCellDef> Pregnant Status </th>
+    <td *matCellDef="let element"> {{element.pregnant_status}} </td>
+  </ng-container>
+  <!-- Name Column -->
+  <ng-container matColumnDef="referral_code">
+    <th *matHeaderCellDef> Refferal <Code></Code> </th>
+    <td *matCellDef="let element"> {{element.referral_code}} </td>
+  </ng-container>
+  <!-- Accept Button -->
+  <ng-container matColumnDef="accept">
+    <th *matHeaderCellDef> Details </th>
+    <td *matCellDef="let element"> <button mat-raised-button color="primary" (click)="accept(element.email)"> Accept</button> </td>
+  </ng-container>
+    <!-- Reject Button -->
+    <ng-container matColumnDef="reject">
+      <th *matHeaderCellDef> Details </th>
+      <td *matCellDef="let element"> <button mat-raised-button color="primary" (click)="reject(element.email)"> Reject</button> </td>
+    </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>

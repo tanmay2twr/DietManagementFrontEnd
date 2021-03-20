@@ -1,0 +1,58 @@
+<br>
+<div *ngIf="sendersRole=='mentor' || sendersRole=='admin'">
+  <div class="container">
+    <div class="row">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Batch Category</th>
+            <th>Batch Group</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Message</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let batch of batches">
+            <td>{{batch.batchCategory}}</td>
+            <td>{{batch.batchGroup}}</td>
+            <td>{{batch.batchStartDate}}</td>
+            <td>{{batch.batchEndDate}}</td>
+            <td>
+              <button mat-raised-button color="primary"
+                (click)="openDiaolog(batch.batchCategory,batch.batchGroup)">Message</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>BATCH_NAME</th>
+        <th>BATCH_MONTH</th>
+        <th>BATCH_GROUP</th>
+        <th>Role</th>
+        <th>Message</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td *ngIf="user.username!=sentBy">{{user.name}}</td>
+        <td *ngIf="user.username!=sentBy">{{user.username}}</td>
+        <td *ngIf="user.username!=sentBy">{{user.batch_name}}</td>
+        <td *ngIf="user.username!=sentBy">{{user.batch_month}}</td>
+        <td *ngIf="user.username!=sentBy">{{user.batch_group}}</td>
+        <td *ngIf="user.username!=sentBy">{{user.role}}</td>
+        <td *ngIf="user.username!=sentBy">
+          <button mat-raised-button color="primary" (click)="openDiaolog(user.name,user.username)">Message</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

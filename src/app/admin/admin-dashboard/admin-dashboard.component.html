@@ -1,0 +1,40 @@
+<div style="height: 80vh;">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Admin DashBoard</span>
+      <span class="menu-spacer"></span>
+      <div fxShow="true" fxHide.lt-md>
+        <a (click)="onsubmit()" mat-button>Requests</a>
+        <a (click)="search()" mat-button>Users</a>
+        <a (click)="viewChallengers()" mat-button>Challengers</a>
+        <a (click)="message()" mat-button>Message</a>
+        <a (click)="viewMessage()" mat-button>View Message</a>
+        <a (click)="uploadPlan()" mat-button>Upload Plan</a>
+        <a (click)="mangeBatch()" mat-button>Manage Batch</a>
+        <a (click)="changePassword()" mat-button>Change Password</a>
+        <a (click)="logOut()" mat-button>LogOut</a>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-sidenav-container fxFlexFill>
+    <mat-sidenav #sidenav>
+      <mat-nav-list>
+        <a (click)="onsubmit()" mat-list-item>Requests</a>
+        <a (click)="search()" mat-list-item>Users</a>
+        <a (click)="viewChallengers()" mat-list-item>Challengers</a>
+        <a (click)="message()" mat-list-item>Message</a>
+        <a (click)="viewMessage()" mat-list-item>View Message</a>
+        <a (click)="uploadPlan()" mat-list-item>Upload Plan</a>
+        <a (click)="mangeBatch()" mat-list-item>Manage Batch</a>
+        <a (click)="changePassword()" mat-list-item>Change Password</a>
+        <a (click)="logOut()" mat-list-item>LogOut</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content fxFlexFill>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

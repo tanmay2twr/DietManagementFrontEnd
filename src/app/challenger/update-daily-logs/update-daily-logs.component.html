@@ -1,0 +1,45 @@
+<br>
+<div style="text-align: center; ">
+  <h1>Update Your Daily Logs</h1>
+</div>
+<div class="container">
+  <div style="padding-left:425px;padding-top: 20px;">
+  <form #updateForm="ngForm" (ngSubmit)="update()">
+    <div class="form-group">
+      <label for="month">Breakfast</label>
+      <input type="text" class="form-control" name="month" placeholder="Enter Breakfast" [(ngModel)]="log.breakfast">
+    </div>
+    <div class="form-group">
+      <label for="Biceps">Date</label>
+      <input type="date" class="form-control" name="Biceps" [(ngModel)]="log.date">
+    </div>
+    <div class="form-group">  
+      <label for="chest">Dinner</label>
+      <input type="text" class="form-control" name="dinner" placeholder="Enter dinner" [(ngModel)]="log.dinner">
+    </div>
+    <div class="form-group">
+      <label for="foreArms">ExtraActivity</label>
+      <input type="text" class="form-control" name="extraActivity" placeholder="Enter extraActivity"
+        [(ngModel)]="log.extraActivity">
+    </div>
+    <div class="form-group">
+      <label for="foreArms">Lunch</label>
+      <input type="text" class="form-control" name="lunch" placeholder="Enter lunch" [(ngModel)]="log.lunch">
+    </div>
+    <div class="form-group">
+      <label for="foreArms">Fruits</label>
+      <input type="text" class="form-control" name="fruits" placeholder="Enter fruits" [(ngModel)]="log.fruits">
+    </div>
+    <div class="form-group">
+      <label for="foreArms">Vegetables</label>
+      <input type="text" class="form-control" name="vegetables" placeholder="Enter vegetables"
+        [(ngModel)]="log.vegetables">
+    </div>
+    <div class="form-group">
+      <label for="workout">Workout</label>
+      <input type="text" class="form-control" name="workout" placeholder="Enter workout" [(ngModel)]="log.workout">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+</div>

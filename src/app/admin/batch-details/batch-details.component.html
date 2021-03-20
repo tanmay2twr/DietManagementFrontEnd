@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Batch Category</th>
+          <th>Batch Group</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Add Mentor</th>
+          <th>Submit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let batch of batches">
+          <td>{{batch.batchCategory}}</td>
+          <td>{{batch.batchGroup}}</td>
+          <td>{{batch.batchStartDate}}</td>
+          <td>{{batch.batchEndDate}}</td>
+          <td>
+            <mat-form-field appearance="fill">
+              <mat-label>Select Mentor</mat-label>
+              <mat-select [formControl]="mentors" (selectionChange)="selected(mentors.value,batch.batchId)" multiple>
+                <mat-select-trigger>
+                  {{mentors.value ? mentors.value[0] : ''}}
+                  <span *ngIf="mentors.value?.length > 1" class="example-additional-selection">
+                    (+{{mentors.value.length - 1}} {{mentors.value ?.length === 2 ? 'other' : 'others'}})
+                  </span>
+                </mat-select-trigger>
+                <mat-option *ngFor="let mentor of mentorsList" [value]="mentor.name">{{mentor.name}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </td>
+          <td>
+            <button mat-raised-button color="primary" (click)="update()">Submit</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

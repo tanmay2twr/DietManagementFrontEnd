@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>SentBy</th>
+          <th>Message</th>
+          <th>Reply</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let message of messages">
+          <td>{{message.sentBy}}</td>
+          <td>{{message.message}}</td>
+          <td>
+            <button mat-raised-button color="primary" (click)="openDialog(message.sentBy,message.sentBy)">Reply</button>
+          </td>
+          <td>
+            <button mat-raised-button color="primary" (click)="deleteMessage(message.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

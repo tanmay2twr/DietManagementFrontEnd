@@ -1,0 +1,45 @@
+<div class="container">
+  <div style="padding-left:400px;padding-top: 30px;">
+  <form #updateForm="ngForm" (ngSubmit)="update()">
+    <div class="form-group">
+      <label for="month">Month</label>
+      <input type="text" class="form-control" name="month" placeholder="Enter Month" [(ngModel)]="log.month">
+    </div>
+    <div class="form-group">
+      <label for="Biceps">Biceps</label>
+      <input type="text" class="form-control" name="Biceps" placeholder="Enter Biceps in Inch" [(ngModel)]="log.biceps">
+    </div>
+    <div class="form-group">
+      <label for="chest">Chest</label>
+      <input type="text" class="form-control" name="chest" placeholder="Enter chest in Inch" [(ngModel)]="log.chest">
+    </div>
+    <div class="form-group">
+      <label for="foreArms">ForeArms</label>
+      <input type="text" class="form-control" name="foreArms" placeholder="Enter foreArms in Inch"
+        [(ngModel)]="log.foreArms">
+    </div>
+    <div class="form-group">
+      <label for="height">Height</label>
+      <input type="text" class="form-control" name="height" placeholder="Enter height in cm" [(ngModel)]="log.height">
+    </div>
+    <div class="form-group">
+      <label for="shoulders">Shoulders</label>
+      <input type="text" class="form-control" name="shoulders" placeholder="Enter shoulders in Inch"
+        [(ngModel)]="log.shoulders">
+    </div>
+    <div class="form-group">
+      <label for="thighs">Thighs</label>
+      <input type="text" class="form-control" name="thighs" placeholder="Enter thighs in Inch" [(ngModel)]="log.thighs">
+    </div>
+    <div class="form-group">
+      <label for="waist">Waist</label>
+      <input type="text" class="form-control" name="waist" placeholder="Enter waist in Inch" [(ngModel)]="log.waist">
+    </div>
+    <div class="form-group">
+      <label for="Biceps">Weight</label>
+      <input type="text" class="form-control" name="weight" placeholder="Enter weight in Kg" [(ngModel)]="log.weight">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  </div>
+</div>

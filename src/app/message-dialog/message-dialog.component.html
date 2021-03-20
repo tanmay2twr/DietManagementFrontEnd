@@ -1,0 +1,8 @@
+<h2>Write message for {{data.fullname}}</h2>
+<mat-form-field class="example-full-width">
+  <textarea matInput [(ngModel)]="message" placeholder="Enter message here..."></textarea>
+</mat-form-field>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data.fullname" (click)="sendMessage()" cdkFocusInitial>Ok</button>
+</div>

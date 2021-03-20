@@ -1,0 +1,39 @@
+<div style="height: 80vh;">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Challenger DashBoard</span>
+      <span class="menu-spacer"></span>
+      <div fxShow="true" fxHide.lt-md>
+        <a (click)="update()" mat-button>Update Monthly Chart</a>
+        <a (click)="updateDailyLog()" mat-button>Update DailyLog</a>
+        <a (click)="viewMessage()" mat-button>MyMessages</a>
+        <a (click)="message()" mat-button>Messages</a>
+        <a (click)="viewDietChart()" mat-button>Diet Chart</a>
+        <a (click)="changePassword()" mat-button>Change Password</a>
+        <a (click)="logOut()" mat-button>LogOut</a>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-sidenav-container fxFlexFill>
+    <mat-sidenav #sidenav>
+      <mat-nav-list>
+        <a (click)="update()" mat-list-item>Update Monthly Chart</a>
+        <a (click)="updateDailyLog()" mat-list-item>Update DailyLog</a>
+        <a (click)="viewMessage()" mat-list-item>MyMessages</a>
+        <a (click)="message()" mat-list-item>Messages</a>
+        <a (click)="viewDietChart()" mat-list-item>Diet Chart</a>
+        <a (click)="changePassword()" mat-list-item>Change Password</a>
+        <a (click)="logOut()" mat-list-item>LogOut</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content fxFlexFill>
+      <router-outlet></router-outlet>
+      <br><br><br><br><br>
+      <br><br><br><br><br>
+      <br><br><br><br><br>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

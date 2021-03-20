@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>DailyLog</th>
+          <th>MonthlyLog</th>
+          <th>Charts</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{user.name}}</td>
+          <td>{{user.username}}</td>
+          <td>
+              <button mat-raised-button color="primary" (click)="viewDailyLogs(user.username)">DailyLog</button>
+          </td>
+          <td>
+              <button mat-raised-button color="primary" (click)="viewMonthlyLogs(user.username)">MonthlyLog</button>
+          </td>
+          <td>
+              <button mat-raised-button color="primary" (click)="viewCharts(user.username)">Charts</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

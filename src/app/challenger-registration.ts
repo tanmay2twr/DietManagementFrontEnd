@@ -1,0 +1,23 @@
+export class ChallengerRegistration {
+    fullName:String;
+    age:number;
+    gender:string;
+    mobileNumber:number;
+    email:string;
+    address:string;
+    city:string;
+    state:string;
+    country:string;
+    pincode:number;
+    height:number;
+    weight:number;
+    bmi:number;
+    reason:string;
+    existing_medical:string;
+    existing_dietary:string;
+    dietary_custom:string;
+    pregnant_status:string;
+    referral_code:string;
+    constructor(){
+    }
+}

@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>File Name</th>
+            <th>DownLoad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let file of files">
+            <td>{{file.fileName}}</td>
+            <td>
+              <div class="example-button-row">
+                <button mat-raised-button color="primary" (click)="download(file.id,file.fileName)">DownLoad</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
